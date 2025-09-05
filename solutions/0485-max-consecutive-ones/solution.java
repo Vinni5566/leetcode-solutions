@@ -5,13 +5,20 @@ class Solution {
         int currentStreak = 0;  // counts current consecutive 1s
 
         for(int num : nums) {
-            if(num == 0) {
-                currentStreak = 0;
+            if(num == 1) {
+                currentStreak += 1; //extend current streak
             } else {
-                currentStreak += 1;
-            }
+                    if(currentStreak > maxStreak) {
+                        maxStreak = currentStreak;
+                    }
 
-            if(maxStreak < currentStreak) maxStreak = currentStreak;
+                    currentStreak = 0; //reset current streak (num == 0)
+            }
+        }
+
+        // final check in case array ends with 1s
+        if(currentStreak > maxStreak) {
+            maxStreak = currentStreak;
         }
 
         return maxStreak;
