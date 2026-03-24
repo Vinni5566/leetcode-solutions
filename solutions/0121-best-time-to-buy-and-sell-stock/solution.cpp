@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        
+
         int cheapestPrice = prices[0];
         int maxProfit = 0;
 
@@ -12,5 +12,6 @@ public:
         }
 
         return maxProfit;
+        
     }
 };
