@@ -8,7 +8,6 @@ public:
         for(int i = 0; i < num.length(); i++) {
 
             char curr = num[i];
-
             
             while(!st.empty() && st.top() > curr && k > 0) {
                 st.pop();
