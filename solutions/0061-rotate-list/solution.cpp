@@ -26,9 +26,12 @@ public:
         curr->next = head;
 
         //find new tail and new head
+
         k = k % n; //handle k > n
+
         int stepsToNewTail = n - k - 1;
         ListNode* newTail = head;
+        
         for (int i = 0; i < stepsToNewTail; i++) {
             newTail = newTail->next;
         }
